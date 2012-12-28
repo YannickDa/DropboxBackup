@@ -8,8 +8,7 @@
 # - Uses BASH Dropbox Uploader <http://j.mp/p2U0ai> instead ncftp (dropbox_uploader.sh needs to be in the same dir)
 # - Mailing if backup fails disabled since it wasn't reliable
 # - Generates Windows friendly filenames
-# - Uses rar instead of tar+gzip so it can properly split files bigger than 100 MB (Dropbox API has problems with big files)
-# Last update, May 12, 2012 by Nyr
+# Last update, Dec 28, 2012 by Nyr
 
 
 ### System setup ###
@@ -34,7 +33,7 @@ GZIP="$(which gzip)"
 
 # Start Backup for the file system
 mkdir -p $BACKUP
-rar a -v100M $BACKUP/fs-$NOW $DIRS
+tar -czf $BACKUP/files-$NOW.tar.gz $DIRS
 
 # Start MySQL Backup
 # Get all databases name

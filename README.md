@@ -7,7 +7,7 @@ Includes code from [nixCraft](http://www.cyberciti.biz/tips/how-to-backup-mysql-
 
 Requeriments
 ------------
-Unix system with cURL and RAR installed.
+Unix system with cURL installed.
 
 Installation
 ------------
